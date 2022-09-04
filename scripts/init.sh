@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # 1. sudo apt-get install -y git
 # 2. git clone https://github.com/nfl1ryxditimo12/inception
