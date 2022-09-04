@@ -4,8 +4,8 @@
 # 2. git clone https://github.com/nfl1ryxditimo12/inception
 
 function repository() {
-  sudo sed -i "s/http:\/\/security.ubuntu.com/https:\/\/mirror.kakao.com" /etc/apt/sources.list
-  sudo sed -i "s/http:\/\/kr.archive.ubuntu.com/https:\/\/mirror.kakao.com" /etc/apt/sources.list
+  sudo sed -i "s/http:\/\/security.ubuntu.com/https:\/\/mirror.kakao.com/g" /etc/apt/sources.list
+  sudo sed -i "s/http:\/\/kr.archive.ubuntu.com/https:\/\/mirror.kakao.com/g" /etc/apt/sources.list
 }
 
 function zsh() {
@@ -13,7 +13,7 @@ function zsh() {
 
   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-  sudo sed -i "s/plugins=(git)/plugins=(git zsh-autosuggestions)"
+  sudo sed -i "s/plugins=(git)/plugins=(git zsh-autosuggestions)/g"
   source ~/.zshrc
 }
 
@@ -22,7 +22,7 @@ function ssh() {
     inet-tools \
     openssh-server \
 
-  sudo sed -i "s/#Port 22/Port 22" /etc/ssh/sshd_config
+  sudo sed -i "s/#Port 22/Port 22/g" /etc/ssh/sshd_config
   sudo systemctl restart ssh
   sudo ufw enable
   sudo ufw allow 22
