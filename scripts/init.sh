@@ -45,5 +45,5 @@ function util() {
 	echo "=================================================UTIL END"
 }
 
-repository && zsh && ssh && util
+repository && ssh && util && zsh
 
