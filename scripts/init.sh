@@ -19,7 +19,7 @@ function zsh() {
 
 function ssh() {
   sudo apt-get install -y \
-    inet-tools \
+    net-tools \
     openssh-server \
 
   sudo sed -i "s/#Port 22/Port 22/g" /etc/ssh/sshd_config
@@ -33,8 +33,7 @@ function util() {
     apt-transport-https \
     make \
     vim \
-    systemd \
-	net-tools
+    systemd 
 }
 
 sudo apt-get update
