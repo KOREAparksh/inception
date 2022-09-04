@@ -33,7 +33,8 @@ function util() {
     apt-transport-https \
     make \
     vim \
-    systemd
+    systemd \
+	net-tools
 }
 
 sudo apt-get update
