@@ -7,7 +7,7 @@ function repository() {
 	echo "=================================================REPOSITORY START"
   sudo sed -i "s/http:\/\/security.ubuntu.com/https:\/\/mirror.kakao.com/g" /etc/apt/sources.list
   sudo sed -i "s/http:\/\/kr.archive.ubuntu.com/https:\/\/mirror.kakao.com/g" /etc/apt/sources.list
-  
+sudo apt-get update  
 	echo "=================================================REPOSITORY END"
 }
 
@@ -44,8 +44,6 @@ function util() {
     systemd 
 	echo "=================================================UTIL END"
 }
-
-sudo apt-get update
 
 repository && zsh && ssh && util
 
