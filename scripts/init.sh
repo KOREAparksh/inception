@@ -39,3 +39,4 @@ function util() {
 sudo apt-get update
 
 repository && zsh && ssh && util
+

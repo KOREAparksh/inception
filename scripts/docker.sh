@@ -11,3 +11,4 @@ echo "alias del-container=\"docker rm -f \$(docker images -aq)" >> ~/.zshrc
 echo "alias del-image=\"docker rmi -f \$(docker images -aq)" >> ~/.zshrc
 
 source ~/.zshrc
+
