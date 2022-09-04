@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 sudo curl -sSL https://get.docker.com/ | sh && \
 sudo curl -L https://github.com/docker/compose/releases/download/v2.10.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose && \
