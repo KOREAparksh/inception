@@ -4,20 +4,26 @@
 # 2. git clone https://github.com/nfl1ryxditimo12/inception
 
 function repository() {
+	echo "=================================================REPOSITORY START"
   sudo sed -i "s/http:\/\/security.ubuntu.com/https:\/\/mirror.kakao.com/g" /etc/apt/sources.list
   sudo sed -i "s/http:\/\/kr.archive.ubuntu.com/https:\/\/mirror.kakao.com/g" /etc/apt/sources.list
+  
+	echo "=================================================REPOSITORY END"
 }
 
 function zsh() {
+	echo "=================================================ZSH START"
   sudo apt-get install -y curl
 
   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
   sudo sed -i "s/plugins=(git)/plugins=(git zsh-autosuggestions)/g" ~/.zshrc
   source ~/.zshrc
+  echo "=================================================ZSH END"
 }
 
 function ssh() {
+	echo "=================================================SSH START"
   sudo apt-get install -y \
     net-tools \
     openssh-server \
@@ -26,14 +32,17 @@ function ssh() {
   sudo systemctl restart ssh
   sudo ufw enable
   sudo ufw allow 22
+  echo "=================================================SSH END"
 }
 
 function util() {
+	echo "=================================================UTIL START"
   sudo apt-get install -y \
     apt-transport-https \
     make \
     vim \
     systemd 
+	echo "=================================================UTIL END"
 }
 
 sudo apt-get update
